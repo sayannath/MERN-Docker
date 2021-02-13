@@ -32,7 +32,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          The Response is: {response}
+          Hello! I am Sayan Nath.
         </a>
       </header>
     </div>

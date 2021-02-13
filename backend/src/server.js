@@ -20,7 +20,7 @@ const corsOptions = {
 
 
 app.get("/test", cors(corsOptions), (req, res) => {
-  res.send("Hello from Express!!!");
+  res.send("Hello! I am Sayan Nath.");
 });
 
 //Starting a Server

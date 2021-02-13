@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node server.js",
-    "start": "node ./src/server.js"
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
   },
   "keywords": [
     "Docker"
@@ -17,5 +18,8 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
