@@ -1,0 +1,29 @@
+version: "3.7"
+
+services: 
+  frontend:
+    build:
+      context: ./frontend/
+    command: npm start
+    volumes:
+      - ./frontend/src:/usr/app/src
+    ports:
+      - '3000:3000'
+    tty: true
+    stdin_open: true  
+    environment: 
+      - REACT_APP_API_PORT=3001
+      - REACT_APP_API_URL=api 
+  
+  api:
+    build:
+      context: ./backend/
+    command: npm start
+    volumes:
+      - ./backend/src:/usr/app/src
+    ports:
+      - '3001:3001'
+    environment:
+      - PORT=3001
+      - CORS_PORT=3000
+      - CORS_URL=frontend
